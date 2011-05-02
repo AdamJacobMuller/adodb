@@ -31,7 +31,7 @@ var $database = '';
 		case 'EXECUTE':
 			$this->sql = $p1;
 			$this->params = $p2;
-			$s = "$dbms error: [$errno: $errmsg] in $fn(\"$p1\")\n";
+			$s = "$dbms error: [$errno: $errmsg] in $fn(\"$p1\",\"".var_export($p2,true)."\")\n";
 			break;
 	
 		case 'PCONNECT':
